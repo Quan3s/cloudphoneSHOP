@@ -7,6 +7,7 @@ const apiRoutes = require('./src/routes/api');
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(express.static('public')); // Thêm dòng này sau khi khai báo app
 
 // Tự động khởi tạo bảng SQL - Không cần chạy lệnh ngoài
 const initDB = async () => {
